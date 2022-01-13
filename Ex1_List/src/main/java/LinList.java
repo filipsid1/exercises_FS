@@ -10,11 +10,14 @@ public class LinList {
         Random rand = new Random();
 
         List<Integer> linkedList = new LinkedList<Integer>();
+        long start = System.nanoTime();
         for(int i=0;i<X;i++){
             int random = rand.nextInt(9999);
             linkedList.add(random);
         }
-        System.out.println(linkedList);
+        long elapsedNanos = System.nanoTime() - start;
+        //System.out.println(linkedList);
+        System.out.println(elapsedNanos);
         return 0;
     }
     boolean methodAddOnBeg(int X){

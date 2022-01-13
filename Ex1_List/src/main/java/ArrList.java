@@ -7,11 +7,14 @@ public class ArrList {
         System.out.println("ArrayList: (add at the end)");
         Random rand = new Random();
         List<Integer> arrayList = new ArrayList<Integer>();
+        long start = System.nanoTime();
         for (int i = 0; i < X; i++) {
             int random = rand.nextInt(9999);
             arrayList.add(random);
         }
-        System.out.println(arrayList);
+        long elapsedNanos = System.nanoTime() - start;
+        //System.out.println(arrayList);
+        System.out.println(elapsedNanos);
     return 0;
     }
     boolean methodAddOnBeg(int X){

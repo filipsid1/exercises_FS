@@ -8,11 +8,14 @@ import java.util.Random;
                 System.out.println("HashSet: ");
                 Random rand = new Random();
                 HashSet hashSet = new HashSet();
+                long start = System.nanoTime();
                 for (int i = 0; i < X; i++) {
                     int random = rand.nextInt(9999);
                     hashSet.add(random);
                 }
-                System.out.println(hashSet);
+                long elapsedNanos = System.nanoTime() - start;
+                //System.out.println(hashSet);
+                System.out.println(elapsedNanos);
                return 0;
             }
     }
